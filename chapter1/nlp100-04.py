@@ -16,6 +16,5 @@ for i, word in enumerate(words):
         t = word[0]
     else:
         t = word[:2]
-
     dic_element[t] = n
 print(dic_element)
