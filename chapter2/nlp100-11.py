@@ -3,7 +3,9 @@
 
 # 第2章: UNIXコマンド
 # 11. タブをスペースに置換Permalink
-# タブ1文字につきスペース1文字に置換せよ．確認にはsedコマンド，trコマンド，もしくはexpandコマンドを用いよ．
+# タブ1文字につきスペース1文字に置換せよ．
+# 確認にはsedコマンド，trコマンド，もしくはexpandコマンドを用いよ．
+
 f_in = 'popular-names.txt'
 f_out = 'space.txt'
 count_lines = 0

@@ -3,7 +3,9 @@
 
 # 第2章: UNIXコマンド
 # 10. 行数のカウント
-# 行数をカウントせよ．確認にはwcコマンドを用いよ．
+# 行数をカウントせよ．
+# 確認にはwcコマンドを用いよ．
+
 f_in = 'popular-names.txt'
 count_lines = 0
 with open(f_in) as f:
