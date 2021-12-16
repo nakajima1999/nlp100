@@ -29,9 +29,5 @@ if __name__ == '__main__':
             dic_basic_info[field] = value
             print('{}:{}'.format(field, value))
 
-# 結果を出力        
+# 結果を出力
 print(dic_basic_info)
-
-    
-
-   
