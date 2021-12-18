@@ -42,7 +42,18 @@ if __name__ == '__main__':
         for result in all_result:
             rm_result = result[2:-2].split('|')[-1]  # 内部リンクマークアップの除去した後のテキスト
             value = value.replace(result, rm_result)
-            
+
+        # 外部リンクマークアップの除去
+        # \w: 任意の英数字
+        # ! ? / _ ~ = ; , * & @ # $ % 
+        # + - . ( ) ' [ ]
+        pattern = r'https?://[\w!?/_~=;,*&@#$%\+\-\.\(\)\'\[\]]+'
+        value = re.sub(pattern, '', value)
+
+        # HTMLタグの除去
+        pattern = r'<.+?>' 
+        value = re.sub(pattern, '', value)
+
         if len(field) > 0 and len(value) > 0:
             dic_basic_info[field] = value
             print('{}:{}'.format(field, value))
